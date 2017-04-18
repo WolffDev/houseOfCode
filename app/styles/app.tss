@@ -59,6 +59,22 @@ overrode the settings with other TSS, XML, or JS settings:
     top: "5dp"
 }
 
+".activeNavBtn": {
+    width: "25%",
+    height: "60dp",
+    borderColor: Alloy.Globals.backgroundColor,
+    backgroundColor: Alloy.Globals.backgroundColor,
+    borderWidth: "0.5dp"
+}
+".activeNavLabel": {
+    bottom: "8dp",
+    color: "white",
+    font: {
+        fontFamily: "Roboto-Light",
+        fontSize: "10dp"
+    }
+}
+
 "View": {
     height: Ti.UI.SIZE
 }

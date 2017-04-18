@@ -7,9 +7,9 @@
         <View id="navBottomWrapper">
             <View id="navBottom" layout="horizontal">
 
-                <View class="navBtn" id="discoverNav" onClick="myapp.openLogin">
-                    <ImageView image="images/globe.png" class="navImage"></ImageView>
-                    <Label text="Opdag" class="navLabel"></Label>
+                <View class="activeNavBtn" id="discoverNav" onClick="myapp.openLogin">
+                    <ImageView image="images/globe_white.png" class="navImage"></ImageView>
+                    <Label text="Opdag" class="activeNavLabel"></Label>
                 </View>
 
                 <View class="navBtn" id="tasksNav" onClick="myapp.openTasks">

@@ -17,9 +17,9 @@
                     <Label text="Tilmeldte Opgaver" class="navLabel"></Label>
                 </View>
 
-                <View class="navBtn" id="profileNav" onClick="myapp.openProfile">
-                    <ImageView image="images/user.png" class="navImage"></ImageView>
-                    <Label text="Profil" class="navLabel"></Label>
+                <View class="activeNavBtn" id="profileNav" onClick="myapp.openProfile">
+                    <ImageView image="images/user_white.png" class="navImage"></ImageView>
+                    <Label text="Profil" class="activeNavLabel"></Label>
                 </View>
 
                 <View class="navBtn" id="settingsNav" onClick="myapp.openSettigns">
