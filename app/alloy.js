@@ -23,6 +23,8 @@ Alloy.Globals.roboto = "Roboto-Light";
 // 	color: Alloy.Globals.blueElement
 // }
 
+var myAddress = {};
+
 
 var myapp = {
     openDiscover: function() {

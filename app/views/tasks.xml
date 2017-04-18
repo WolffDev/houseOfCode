@@ -14,7 +14,7 @@
                     <Label text="Opdag" class="navLabel"></Label>
                 </View>
 
-                <View class="activeNavBtn" id="tasksNav" onClick="myapp.openTasks">
+                <View class="activeNavBtn" id="tasksNav">
                     <ImageView image="images/check_white.png" class="navImage"></ImageView>
                     <Label text="Tilmeldte Opgaver" class="activeNavLabel"></Label>
                 </View>

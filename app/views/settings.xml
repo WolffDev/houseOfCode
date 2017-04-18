@@ -22,7 +22,7 @@
                     <Label text="Profil" class="navLabel"></Label>
                 </View>
 
-                <View class="activeNavBtn" id="settingsNav" onClick="myapp.openSettigns">
+                <View class="activeNavBtn" id="settingsNav">
                     <ImageView image="images/cog_white.png" class="navImage"></ImageView>
                     <Label text="Indstillinger" class="activeNavLabel"></Label>
                 </View>
