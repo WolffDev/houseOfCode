@@ -1,0 +1,9 @@
+<Alloy>
+    <Window id="login" class="container">
+        <View layout="vertical">
+            <View onClick="myapp.openDiscover">
+                <Label text="Open Discover page"></Label>
+            </View>
+        </View>
+    </Window>
+</Alloy>

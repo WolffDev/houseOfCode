@@ -1,0 +1,1 @@
+thisWindow = $.discover;

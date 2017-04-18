@@ -1,0 +1,33 @@
+<Alloy>
+	<Window id="profile" class="container">
+        <View>
+            <Label>PROFILE</Label>
+        </View>
+
+        <View id="navBottomWrapper">
+            <View id="navBottom" layout="horizontal">
+
+                <View class="navBtn" id="discoverNav" onClick="myapp.openDiscover">
+                    <ImageView image="images/globe.png" class="navImage"></ImageView>
+                    <Label text="Opdag" class="navLabel"></Label>
+                </View>
+
+                <View class="navBtn" id="tasksNav" onClick="myapp.openTasks">
+                    <ImageView image="images/check.png" class="navImage"></ImageView>
+                    <Label text="Tilmeldte Opgaver" class="navLabel"></Label>
+                </View>
+
+                <View class="navBtn" id="profileNav" onClick="myapp.openProfile">
+                    <ImageView image="images/user.png" class="navImage"></ImageView>
+                    <Label text="Profil" class="navLabel"></Label>
+                </View>
+
+                <View class="navBtn" id="settingsNav" onClick="myapp.openSettigns">
+                    <ImageView image="images/cog.png" class="navImage"></ImageView>
+                    <Label text="Indstillinger" class="navLabel"></Label>
+                </View>
+
+           </View>
+       </View>
+	</Window>
+</Alloy>
