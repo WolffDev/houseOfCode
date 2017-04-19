@@ -23,6 +23,8 @@ Alloy.Globals.roboto = "Roboto-Light";
 // 	color: Alloy.Globals.blueElement
 // }
 
+
+
 var myAddress = {};
 
 var MapModule = require('ti.map');
@@ -136,7 +138,32 @@ var myapp = {
     	        // }
     	    });
     	}else{
-    		Ti.Geolocation.requestLocationPermissions();
+    		Ti.Geolocation.requestLocationPermissions(myapp.getUserLocation);
     	}
     }
 };
+
+// if(Ti.Geolocation.isLocationProviderEnabled(Titanium.Geolocation.PROVIDER_GPS,     Titanium.Geolocation.ACCURACY_BEST) == false) {
+// var alertDlg = Titanium.UI.createAlertDialog({
+//     title:'MileTrackGPS',
+//     message:'GPS is OFF.  Enable it in Settings.',
+//     buttonNames: ['Cancel', 'Open Settings']
+// });
+// alertDlg.cancel = 0;
+//
+// alertDlg.addEventListener('click', function(e){
+//     if(!e.cancel) {
+//         //open up the settings page
+//         var settingsIntent = Titanium.Android.createIntent({
+//             action: 'android.settings.LOCATION_SOURCE_SETTINGS'
+//         });
+//         activity.startActivity(settingsIntent);
+//     }
+//     else {
+//         //close the window to exit
+//         win.close();
+//     }
+// });
+//
+// alertDlg.show();
+// }

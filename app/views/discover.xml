@@ -1,8 +1,26 @@
 <Alloy>
     <Window id="discover" class="container">
-        <View>
-            <Label>DISCOVER</Label>
+        <View id="topnav">
+            <Label id="pageTitle" value="Opdag">Opdag</Label>
         </View>
+
+        <View id="topTabWrap">
+            <Label class="topTapBtn" backgroundColor=Alloy.Globals.viewTitle text="I nærheden"></Label>
+            <Label class="topTapBtn" text="Favoritter"></Label>
+            <Label class="topTapBtn" text="Søg"></Label>
+        </View>
+
+        <ScrollView id="discoverContent" scrollType="vertical" layout="vertical">
+
+            <View id="mapview">
+
+            </View>
+
+            <View>
+                <Label text="TEST"></Label>
+            </View>
+
+        </ScrollView>
 
         <View id="navBottomWrapper">
             <View id="navBottom" layout="horizontal">

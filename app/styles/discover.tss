@@ -1,4 +1,31 @@
+"#topTabWrap": {
+    layout: "horizontal",
+    height: "40dp",
+    width: "100%",
+    backgroundColor: "white",
+    top: 60,
+    zIndex: "100"
+}
+".topTapBtn": {
+    height: "40dp",
+    width: "33.3334%",
+    top: 0,
+    backgroundColor: "white",
+    color: Alloy.Globals.backgroundColor,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+    font: {
+        fontFamily: "Roboto-Light",
+        fontSize: "14dp"
+    },
+    borderWidth: "0.5",
+    borderColor: "black"
+}
 
-".container" : {
-  
+"#discoverContent": {
+    top: "100dp"
+}
+
+"#mapview": {
+    height: "250dp",
+    backgroundColor: "olive"
 }

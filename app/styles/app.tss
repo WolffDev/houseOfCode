@@ -78,3 +78,18 @@ overrode the settings with other TSS, XML, or JS settings:
 "View": {
     height: Ti.UI.SIZE
 }
+
+"#topnav": {
+    height: "60dp",
+    width: "100%",
+    backgroundColor: Alloy.Globals.backgroundColor,
+    top: 0,
+    zIndex: "100"
+}
+"#pageTitle": {
+    color: Alloy.Globals.viewTitle,
+    font: {
+        fontFamily: "Roboto-Light",
+        fontSize: "24dp"
+    }
+}

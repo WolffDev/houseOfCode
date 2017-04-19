@@ -5,7 +5,7 @@
     <version>1.0</version>
     <publisher>calus</publisher>
     <url/>
-    <description/>
+    <description>undefined</description>
     <copyright>2017 by calus</copyright>
     <icon>appicon.png</icon>
     <fullscreen>false</fullscreen>
@@ -49,8 +49,23 @@
                     android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBotnDBlQ21qy9VAwIr81RpCW21HMSIxHk"/>
                 <activity
                     android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                    android:screenOrientation="portrait"
                     android:label="houseOfCodeAppc"
-                    android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+                    android:name="Favou"
+                    android:theme="@android:style/Theme.Translucent.NoTitleBar">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN"/>
+                        <category android:name="android.intent.category.LAUNCHER"/>
+                    </intent-filter>
+                </activity>
+                <activity
+                    android:configChanges="keyboardHidden|orientation|screenSize"
+                    android:name="org.appcelerator.titanium.TiActivity"
+                    android:screenOrientation="portrait"/>
+                <activity
+                    android:configChanges="keyboardHidden|orientation|screenSize"
+                    android:name="org.appcelerator.titanium.TiTranslucentActivity"
+                    android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Translucent"/>
             </application>
             <uses-feature android:name="android.hardware.location.gps"/>
             <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -71,8 +86,8 @@
         <theme>default</theme>
     </mobileweb>
     <modules>
-    <module platform="android">ti.map</module>
-  </modules>
+        <module platform="android">ti.map</module>
+    </modules>
     <deployment-targets>
         <target device="android">true</target>
         <target device="ipad">false</target>
