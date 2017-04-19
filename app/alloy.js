@@ -70,14 +70,13 @@ var myapp = {
         tasksController.tasks.open();
         thisWindow.close();
     },
+    // http://stackoverflow.com/questions/41669615/httpclient-call-is-not-returning-correct-json-data-in-appcelerator-titanium-app
     getUserLocation: function() {
         if (Ti.Geolocation.locationServicesEnabled) {
     		Ti.Geolocation.getCurrentPosition(function (event) {
-                var addrUrl = "http://maps.googleapis.com/maps/api/geocode/json?sensor=true&latlng="+event.coords.latitude+","+event.coords.longitude;
+                var addrUrl = "http://maps.googleapis.com/maps/api/geocode/json?sensor=true&latlng=" + event.coords.latitude + "," + event.coords.longitude;
                 /* web-service call */
-                var addrReq = Titanium.Network.createHTTPClient();
-                addrReq.open("GET",addrUrl);
-                addrReq.send(null);
+                var addrReq = Ti.Network.createHTTPClient();
 
                 addrReq.onload = function()
                 {
@@ -122,6 +121,9 @@ var myapp = {
 
                 };
 
+                addrReq.open("GET",addrUrl);
+                addrReq.send(null);
+
     			// Ti.API.info('Ti.Geolocation.getCurrentPosition Callback Success: ' + event.success);
                 //
     	    	// Ti.UI.createAlertDialog({
@@ -138,7 +140,7 @@ var myapp = {
     	        // }
     	    });
     	}else{
-    		Ti.Geolocation.requestLocationPermissions(myapp.getUserLocation);
+    		Ti.Geolocation.requestLocationPermissions(this.getUserLocation);
     	}
     }
 };

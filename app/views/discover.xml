@@ -16,8 +16,8 @@
 
             </View>
 
-            <View>
-                <Label text="TEST"></Label>
+            <View id="tasksScroll">
+                <Label text="Show Address" onClick="showAddr"></Label>
             </View>
 
         </ScrollView>

@@ -1,7 +1,5 @@
 thisWindow = $.discover;
 
-// alert(myAddress);
-
 var annoView = Ti.UI.createView({
     width: 30,
     height: 30,
@@ -44,3 +42,7 @@ var mapview = MapModule.createView({
 });
 
 $.mapview.add(mapview);
+
+function showAddr(e){
+    alert(myAddress);
+}

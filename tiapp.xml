@@ -50,8 +50,6 @@
                 <activity
                     android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
                     android:screenOrientation="portrait"
-                    android:label="houseOfCodeAppc"
-                    android:name="Favou"
                     android:theme="@android:style/Theme.Translucent.NoTitleBar">
                     <intent-filter>
                         <action android:name="android.intent.action.MAIN"/>
