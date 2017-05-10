@@ -45,12 +45,16 @@
         <manifest>
             <application>
                 <!-- Replace "PASTE YOUR GOOGLE MAPS API KEY HERE" with the Google API key you obtained -->
+                <activity
+                    android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                    android:label="Favou"
+                    android:name="com.facebook.FacebookActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+                <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
                 <meta-data
                     android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBotnDBlQ21qy9VAwIr81RpCW21HMSIxHk"/>
                 <activity
                     android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
-                    android:screenOrientation="portrait"
-                    android:theme="@android:style/Theme.Translucent.NoTitleBar">
+                    android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
                     <intent-filter>
                         <action android:name="android.intent.action.MAIN"/>
                         <category android:name="android.intent.category.LAUNCHER"/>
@@ -58,8 +62,7 @@
                 </activity>
                 <activity
                     android:configChanges="keyboardHidden|orientation|screenSize"
-                    android:name="org.appcelerator.titanium.TiActivity"
-                    android:screenOrientation="portrait"/>
+                    android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait"/>
                 <activity
                     android:configChanges="keyboardHidden|orientation|screenSize"
                     android:name="org.appcelerator.titanium.TiTranslucentActivity"
@@ -85,6 +88,7 @@
     </mobileweb>
     <modules>
         <module platform="android">ti.map</module>
+        <module platform="android">facebook</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>
@@ -92,7 +96,7 @@
         <target device="iphone">false</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>6.0.3.GA</sdk-version>
+    <sdk-version>6.0.1.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>

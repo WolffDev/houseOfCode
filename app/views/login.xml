@@ -4,6 +4,10 @@
             <View onClick="myapp.openDiscover">
                 <Label text="Open Discover page" height="100dp"></Label>
             </View>
+            <View>
+                <LoginButton id="fbLogin" module="facebook" />
+                <!-- <LoginButton id="fbLogin" title="Login" ns="Alloy.Globals.Facebook"/> -->
+            </View>
         </View>
     </Window>
 </Alloy>

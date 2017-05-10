@@ -23,6 +23,9 @@ Alloy.Globals.roboto = "Roboto-Light";
 // 	color: Alloy.Globals.blueElement
 // }
 
+// Make API calls to Alloy.Globals.Facebook
+// Alloy.Globals.Facebook = require('facebook');
+
 
 
 var myAddress = {};
