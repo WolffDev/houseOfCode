@@ -43,6 +43,6 @@ var mapview = MapModule.createView({
 
 $.mapview.add(mapview);
 
-function showAddr(e){
+function showAdr(e){
     alert(myAddress);
 }
