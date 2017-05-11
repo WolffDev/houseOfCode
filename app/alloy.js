@@ -26,9 +26,8 @@ Alloy.Globals.roboto = "Roboto-Light";
 // Make API calls to Alloy.Globals.Facebook
 // Alloy.Globals.Facebook = require('facebook');
 
-
-
-var myAddress = {};
+var loggedInUser = {};
+var userAddress = {};
 
 var MapModule = require('ti.map');
 
@@ -93,17 +92,17 @@ var myapp = {
                                 case "street_number":
                                     Ti.API.info("street number : "+response.results[0].address_components[i].long_name);
 
-                                    myAddress.street_number = response.results[0].address_components[i].long_name;
+                                    userAddress.street_number = response.results[0].address_components[i].long_name;
                                     break;
                                 case "route":
                                     Ti.API.info("street name : "+response.results[0].address_components[i].long_name);
 
-                                    myAddress.street_name = response.results[0].address_components[i].long_name;
+                                    userAddress.street_name = response.results[0].address_components[i].long_name;
                                     break;
                                 case "locality":
                                     Ti.API.info("city name : "+response.results[0].address_components[i].long_name);
 
-                                    myAddress.city = response.results[0].address_components[i].long_name;
+                                    userAddress.city = response.results[0].address_components[i].long_name;
                                     break;
                                 // case "administrative_area_level_1":
                                 //     Ti.API.info("state name : "+response.results[0].address_components[i].long_name);
@@ -111,7 +110,7 @@ var myapp = {
                                 case "postal_code":
                                     Ti.API.info("zip code : "+response.results[0].address_components[i].long_name);
 
-                                    myAddress.postal_code = response.results[0].address_components[i].long_name;
+                                    userAddress.postal_code = response.results[0].address_components[i].long_name;
                                     break;
                                 // case "country":
                                 //     Ti.API.info("country name : "+response.results[0].address_components[i].long_name);
@@ -145,6 +144,11 @@ var myapp = {
     	}else{
     		Ti.Geolocation.requestLocationPermissions(this.getUserLocation);
     	}
+    },
+    getEventById: function() {
+        
+
+
     }
 };
 

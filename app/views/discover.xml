@@ -1,4 +1,5 @@
 <Alloy>
+    <Collection src="eventslist"/>
     <Window id="discover" class="container">
         <View id="topnav">
             <Label id="pageTitle" value="Opdag">Opdag</Label>
@@ -10,15 +11,54 @@
             <Label class="topTapBtn" text="Søg"></Label>
         </View>
 
+
+        <View id="mapview">
+
+        </View>
         <ScrollView id="discoverContent" scrollType="vertical" layout="vertical">
 
-            <View id="mapview">
-
-            </View>
-
-            <View id="tasksScroll">
+            <!-- <View id="tasksScroll">
                 <Label text="Show Address" onClick="showAdr"></Label>
-            </View>
+            </View> -->
+
+            <ListView id="eventList" defaultItemTemplate="event" onItemclick="eventDetail">
+    			<Templates>
+
+    				<ItemTemplate bindId="event" name="event">
+                        <View layout="composite" height="80dp">
+                            <ImageView
+                                bindId="pic"
+                                id="eventImage"
+                                left="10dp"
+                                top="10dp"
+                                borderRadius="30"
+                                height="60"
+                                width="60"
+                                />
+                            <View id="eventTitleView">
+            					<Label bindId="title" id="eventTitle"/>
+                                <Label bindId="creator" id="eventTitle"/>
+                            </View>
+                            <View id="eventDateView">
+                                <Label bindId="date" id="eventDate"/>
+                            </View>
+                        </View>
+    				</ItemTemplate>
+
+    			</Templates>
+
+    			<ListSection id="section" dataCollection="eventslist">
+    				<!-- We need to add the ID of each model in the Collection
+    				so that we can use it later to get a specific user by their ID -->
+    				<ListItem template="event"
+                        event:id="{_id}"
+                        pic:image="{eventImage}"
+                        title:text="{eventTitle}"
+                        creator:text="{creatorName}"
+                        date:text="{eventDate}"/>
+    			</ListSection>
+
+    		</ListView>
 
         </ScrollView>
 

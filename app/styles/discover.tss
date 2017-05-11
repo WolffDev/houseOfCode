@@ -22,10 +22,12 @@
 }
 
 "#discoverContent": {
-    top: "100dp"
+    top: "350dp",
+    bottom: "60dp"
 }
 
 "#mapview": {
     height: "250dp",
-    backgroundColor: "olive"
+    top: "100dp",
+    backgroundColor: Alloy.Globals.backgroundColor
 }
