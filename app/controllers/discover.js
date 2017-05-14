@@ -2,9 +2,19 @@ thisWindow = $.discover;
 
 var EventsList = Alloy.Collections.eventslist;
 
-// $.discover.addEventListener('open', function() {
-//     alert(loggedInUser);
+$.discover.addEventListener('open', function(e) {
+
+    
+
+});
+
+// var dialog = Ti.UI.createAlertDialog({
+//     message: 'Enten er der intet indhold eller det er ved at loade.\nSørg for at have internet aktiveret.',
+//     ok: 'Okay',
+//     title: 'Intet indhold'
 // });
+// dialog.show();
+
 
 EventsList.fetch();
 
@@ -21,16 +31,20 @@ function eventDetail(e) {
             // this.responseText holds the raw text return of the message (used for text/JSON)
             // this.responseXML holds any returned XML (including SOAP)
             // this.responseData holds any returned binary data
-            Ti.API.debug(this.responseText);
-            alert(this.responseText);
+            // Ti.API.debug(this.responseText);
+            // alert(this.responseText);
             // alert('success');
+
+            var dataToPass = JSON.parse(this.responseText);
+            Alloy.createController('eventDetail', dataToPass).getView().open({modal:false});
+            thisWindow.close();
         },
         onerror: function(e) {
             // this function is called when an error occurs, including a timeout
             Ti.API.debug(e.error);
             alert('error');
         },
-        timeout:5000  /* in milliseconds */
+        timeout: 2000  /* in milliseconds */
     });
     xhr.open("GET", url);
     xhr.send();  // request is actually sent with this statement
@@ -82,7 +96,7 @@ var mapview = MapModule.createView({
 
 });
 
-$.mapview.add(mapview);
+// $.mapview.add(mapview);
 
 function showAdr(e){
     alert(userAddress);

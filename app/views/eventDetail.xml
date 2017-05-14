@@ -1,8 +1,84 @@
 <Alloy>
 	<Window id="eventDetail" class="container">
-        <View>
-            <Label>PROFILE</Label>
+        <View id="eventWrapper" layout="vertical" top="0">
+            <View
+                width="100%"
+                height="50dp"
+                layout="composite"
+                top="0"
+                onClick="myapp.openDiscover">
+                <ImageView
+                    image="images/arrow.png"
+                    width="18dp"
+                    top="10dp"
+                    left="15dp"
+                    ></ImageView>
+                <View class="detailsTitleView" top="8dp" height="Ti.UI.SIZE">
+                    <Label class="detailsTitle">Opgavedetaljer</Label>
+                </View>
+            </View>
+
+            <View layout="vertical" top="15dp">
+                <Label id="eventTitle" class="blue-text"></Label>
+                <Label id="eventDate" class="white-text"></Label>
+            </View>
+            <ImageView id="eventImage"
+                top="20dp"
+                width="140dp"
+                height="140dp"
+                borderRadius="70">
+            </ImageView>
+            <View top="5dp">
+                <Label id="eventCreator" class="white-text"></Label>
+            </View>
+
+            <View>
+                <Label id="groupChat">Gruppetchat</Label>
+            </View>
+
+            <ScrollView id="eventDetailWrapper" layout="vertical">
+                <View class="singleEventDetail" layout="vertical" left="20dp" top="20dp" height="Ti.UI.SIZE">
+                    <View layout="horizontal">
+                        <Label id="category" text="Kategori: " class="blue-text"></Label>
+                        <Label id="categoryText" text="Privat" class="white-text"></Label>
+                    </View>
+                    <View layout="horizontal">
+                        <Label id="address" text="Adresse: " class="blue-text"></Label>
+                        <Label id="addressText" class="white-text"></Label>
+                    </View>
+                    <View layout="horizontal">
+                        <Label id="category" text="Kategory: " class="blue-text"></Label>
+                        <Label id="categoryText" class="white-text"></Label>
+                    </View>
+                    <View layout="vertical">
+                        <Label id="descTitle" text="Beskrivelse:" class="blue-text" left="0"></Label>
+                        <Label id="descContent" class="white-text" left="0"></Label>
+                    </View>
+                </View>
+
+                <View top="0">
+                    <Label id="participantsTitle" text="Deltagere" class="blue-text"></Label>
+                </View>
+
+                <View id="participantsWrapper" layout="vertical" bottom="60dp" left="20dp">
+                    <Label class="partTest" text="Hello World!" height="30dp" width="100%"></Label>
+                    <Label class="partTest" text="Hello World!" height="30dp" width="100%"></Label>
+                    <Label class="partTest" text="Hello World!" height="30dp" width="100%"></Label>
+                    <Label class="partTest" text="Hello World!" height="30dp" width="100%"></Label>
+                    <Label class="partTest" text="Hello World!" height="30dp" width="100%"></Label>
+                </View>
+
+
+            </ScrollView>
+
+
+
         </View>
+
+
+
+
+
 
         <View id="navBottomWrapper">
             <View id="navBottom" layout="horizontal">

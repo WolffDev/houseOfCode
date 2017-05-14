@@ -13,6 +13,7 @@
 
 
         <View id="mapview">
+            <Label>The map is loading...</Label>
 
         </View>
         <ScrollView id="discoverContent" scrollType="vertical" layout="vertical">
@@ -25,7 +26,7 @@
     			<Templates>
 
     				<ItemTemplate bindId="event" name="event">
-                        <View layout="composite" height="80dp">
+                        <View layout="composite" height="80dp" width="Ti.UI.FILL">
                             <ImageView
                                 bindId="pic"
                                 id="eventImage"
@@ -35,12 +36,25 @@
                                 height="60"
                                 width="60"
                                 />
-                            <View id="eventTitleView">
-            					<Label bindId="title" id="eventTitle"/>
-                                <Label bindId="creator" id="eventTitle"/>
+                            <View id="eventTitleView" left="70dp" top="20dp" height="Ti.UI.FILL">
+            					<Label bindId="creator" id="eventCreator"
+                                    class="blue-text"
+                                    top="0"
+                                    left="10dp"/>
+                                <Label bindId="title" id="eventTitle"
+                                    class="white-text"
+                                    left="10dp"
+                                    bottom="10dp"/>
                             </View>
-                            <View id="eventDateView">
-                                <Label bindId="date" id="eventDate"/>
+                            <View id="eventDateView" layout="composite" height="Ti.UI.FILL">
+                                <ImageView image="images/arrowgrey.png"
+                                    right="10dp"
+                                    height="15dp"
+                                    top="15dp"></ImageView>
+                                <Label bindId="date" id="eventDate"
+                                    class="white-text"
+                                    right="30dp"
+                                    bottom="10dp"/>
                             </View>
                         </View>
     				</ItemTemplate>
@@ -55,7 +69,7 @@
                         pic:image="{eventImage}"
                         title:text="{eventTitle}"
                         creator:text="{creatorName}"
-                        date:text="{eventDate}"/>
+                        date:text="d. {eventDate}"/>
     			</ListSection>
 
     		</ListView>

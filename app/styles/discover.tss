@@ -31,3 +31,14 @@
     top: "100dp",
     backgroundColor: Alloy.Globals.backgroundColor
 }
+".blue-text": {
+    color: Alloy.Globals.blueText
+}
+".white-text": {
+    color: Alloy.Globals.whiteText
+}
+"#eventCreator": {
+    font: {
+        fontSize: "18dp"   
+    }
+}

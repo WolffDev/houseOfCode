@@ -8,7 +8,7 @@
     <description>undefined</description>
     <copyright>2017 by calus</copyright>
     <icon>appicon.png</icon>
-    <fullscreen>false</fullscreen>
+    <fullscreen>true</fullscreen>
     <navbar-hidden>true</navbar-hidden>
     <analytics>true</analytics>
     <guid>a0ad33b4-ea16-42f2-9222-724274636a27</guid>

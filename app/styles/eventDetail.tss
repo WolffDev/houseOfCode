@@ -1,4 +1,36 @@
+"Label": {
+    font: {
+        fontSize: "18dp"
+    }
+}
+".detailsTitle": {
+    font: {
+        fontSize: "22dp"
+    },
+    color: Alloy.Globals.viewTitle
+}
+".blue-text": {
+    color: Alloy.Globals.blueText
+}
+".white-text": {
+    color: Alloy.Globals.whiteText
+}
+"#groupChat": {
+    backgroundColor: Alloy.Globals.blueElement,
+    height: "40dp",
+    width: "150dp",
+    top: "10dp",
+    borderRadius: "10dp",
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+"#descContent": {
+    font: {
+        fontSize: "14dp"
+    }
+}
 
-".container" : {
-  
+"#participantsTitle": {
+    font: {
+        fontSize: "20dp"
+    }
 }
