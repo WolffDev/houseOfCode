@@ -14,7 +14,7 @@
                     left="15dp"
                     ></ImageView>
                 <View class="detailsTitleView" top="8dp" height="Ti.UI.SIZE">
-                    <Label class="detailsTitle">Opgavedetaljer</Label>
+                    <Label class="detailsTitle" text="Opgavedetaljer"></Label>
                 </View>
             </View>
 

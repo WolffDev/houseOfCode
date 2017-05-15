@@ -26,12 +26,20 @@ Alloy.Globals.roboto = "Roboto-Light";
 // Make API calls to Alloy.Globals.Facebook
 // Alloy.Globals.Facebook = require('facebook');
 
-var loggedInUser = {};
+
 var userAddress = {};
 
 var MapModule = require('ti.map');
 
+
+
 var myapp = {
+    setSession: function(name, string) {
+        Ti.App.Properties.setString(name, string);
+    },
+    getSession: function(name) {
+        return Ti.App.Properties.getString(name);
+    },
     openDiscover: function() {
         var discoverController = Alloy.createController('discover');
         discoverController.discover.open();
@@ -146,7 +154,7 @@ var myapp = {
     	}
     },
     getEventById: function() {
-        
+
 
 
     }

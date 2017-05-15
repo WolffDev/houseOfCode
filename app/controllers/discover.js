@@ -1,12 +1,18 @@
 thisWindow = $.discover;
 
 var EventsList = Alloy.Collections.eventslist;
+var fb = require('facebook');
+
 
 $.discover.addEventListener('open', function(e) {
 
-    
-
 });
+
+function addTask() {
+    var addTaskController = Alloy.createController('create');
+    addTaskController.create.open();
+    thisWindow.close();
+}
 
 // var dialog = Ti.UI.createAlertDialog({
 //     message: 'Enten er der intet indhold eller det er ved at loade.\nSørg for at have internet aktiveret.',

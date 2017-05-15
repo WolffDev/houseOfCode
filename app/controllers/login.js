@@ -6,7 +6,7 @@ $.login.addEventListener('open', function() {
     }
 });
 
-var db = Ti.Database.install('favou.sqlite', 'favouDB');
+
 
 // var fb = Alloy.Globals.Facebook;
 var fb = require('facebook');
@@ -30,7 +30,7 @@ if(Ti.Platform.name === 'android') {
     $.login.fbProxy = fb.createActivityWorker({lifecycleContainer: $.login});
 }
 fb.addEventListener('logout', function(e) {
-    alert('Logged out');
+    // alert('Logged out');
     fb.logout();
 });
 
@@ -38,8 +38,11 @@ fb.addEventListener('logout', function(e) {
 function getFBDetails() {
     fb.requestWithGraphPath("me", {fields: "name,email,picture"}, "GET", function(e){
 		if (e.success){
-            loggedInUser = e.result;
-			// alert(loggedInUser);
+            // loggedInUser = e.result;
+            var result = JSON.parse(e.result);
+            myapp.setSession('profileName', result.name);
+            myapp.setSession('profilePicture', result.picture.data.url);
+            myapp.setSession('profileId', result.id);
             myapp.openDiscover();
 
 

@@ -2,7 +2,8 @@
     <Collection src="eventslist"/>
     <Window id="discover" class="container">
         <View id="topnav">
-            <Label id="pageTitle" value="Opdag">Opdag</Label>
+            <Label id="pageTitle" text="Opdag"></Label>
+            <ImageView image="images/plus.png" right="20dp" height="25dp" onClick="addTask"></ImageView>
         </View>
 
         <View id="topTabWrap">
