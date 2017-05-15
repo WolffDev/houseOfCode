@@ -1,4 +1,128 @@
 <Alloy>
-	<Window id="regTasks" class="container">
+	<Window id="regtasks" class="container">
+
+		<View id="header">
+			<View id="backbutton">
+				<ImageView class="image" image="images/arrow.png"></ImageView>
+			</View>
+				<View id="title">
+					<Label id="spicyrice">Tilmeldte Opgaver</Label>
+				</View>
+		</View>
+
+		<ScrollView id="background">
+			<View class="hr"></View>
+			<View class="taskContainer">
+				<View class="taskLeft">
+					<ImageView class="profileImage" image="images/profil.png"></ImageView>
+				</View>
+				<View class="taskMid">
+					<View class="taskTitleContainer">
+						<Label class="taskTitle">Bla bla title</Label>
+					</View>
+					<View class="taskDescContainer">
+						<Label class="taskDesc">Bla bla description</Label>
+					</View>
+
+				</View>
+				<View class="taskRight">
+
+
+					<View class="expandArrowContainer">
+						<ImageView class="expandArrow" image="images/arrowgrey.png" id="detailsButton" onClick="detailsButton"></ImageView>
+					</View>
+						<ImageView class="imageTrash" image="images/trash.png"></ImageView>
+					<View class="taskDateContainer">
+						<Label class="taskDate">d.18.03.17</Label>
+					</View>
+
+
+				</View>
+			</View>
+			<View class="hr"></View>
+			<View class="taskContainer">
+				<View class="taskLeft">
+					<ImageView class="profileImage" image="images/profil.png"></ImageView>
+				</View>
+				<View class="taskMid">
+					<View class="taskTitleContainer">
+						<Label class="taskTitle">Bla bla title</Label>
+					</View>
+					<View class="taskDescContainer">
+						<Label class="taskDesc">Bla bla description</Label>
+					</View>
+
+				</View>
+				<View class="taskRight">
+
+
+					<View class="expandArrowContainer">
+						<ImageView class="expandArrow" image="images/arrowgrey.png" id="detailsButton" onClick="detailsButton"></ImageView>
+					</View>
+						<ImageView class="imageTrash" image="images/trash.png"></ImageView>
+					<View class="taskDateContainer">
+						<Label class="taskDate">d.18.03.17</Label>
+					</View>
+
+
+				</View>
+			</View>
+			<View class="hr"></View>
+			<View class="taskContainer">
+				<View class="taskLeft">
+					<ImageView class="profileImage" image="images/profil.png"></ImageView>
+				</View>
+				<View class="taskMid">
+					<View class="taskTitleContainer">
+						<Label class="taskTitle">Bla bla title</Label>
+					</View>
+					<View class="taskDescContainer">
+						<Label class="taskDesc">Bla bla description</Label>
+					</View>
+
+				</View>
+				<View class="taskRight">
+
+
+					<View class="expandArrowContainer">
+						<ImageView class="expandArrow" image="images/arrowgrey.png" id="detailsButton" onClick="detailsButton"></ImageView>
+					</View>
+						<ImageView class="imageTrash" image="images/trash.png"></ImageView>
+					<View class="taskDateContainer">
+						<Label class="taskDate">d.18.03.17</Label>
+					</View>
+
+
+				</View>
+			</View>
+			<View class="hr"></View>
+		</ScrollView>
+
+
+        <View id="navBottomWrapper">
+            <View id="navBottom" layout="horizontal">
+
+                <View class="activeNavBtn" id="discoverNav" onClick="myapp.openLogin">
+                    <ImageView image="images/globe_white.png" class="navImage"></ImageView>
+                    <Label text="Opdag" class="activeNavLabel"></Label>
+                </View>
+
+                <View class="navBtn" id="tasksNav" onClick="myapp.openTasks">
+                    <ImageView image="images/check.png" class="navImage"></ImageView>
+                    <Label text="Tilmeldte Opgaver" class="navLabel"></Label>
+                </View>
+
+                <View class="navBtn" id="profileNav" onClick="myapp.openProfile">
+                    <ImageView image="images/user.png" class="navImage"></ImageView>
+                    <Label text="Profil" class="navLabel"></Label>
+                </View>
+
+                <View class="navBtn" id="settingsNav" onClick="myapp.openSettigns">
+                    <ImageView image="images/cog.png" class="navImage"></ImageView>
+                    <Label text="Indstillinger" class="navLabel"></Label>
+                </View>
+
+           </View>
+       </View>
 	</Window>
 </Alloy>

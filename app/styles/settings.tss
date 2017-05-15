@@ -1,4 +1,52 @@
+"#test":{
+	backgroundColor: "#ffffff",
+	width: "90%",
+	height: 200,
+	layout: "vertical",
+	top: 40,
+	borderRadius: 10,
+}
 
-".container" : {
-  
+".settingsLine":{
+	width: "90%",
+	top: 20,
+	height: 40,
+	borderColor: "#59d3ca",
+	layout: "horizontal"
+
+}
+"#slider":{
+	top: 10,
+	width: "100%",
+	right: 10,
+
+}
+
+".settingsLineLeft":{
+	width: "40%",
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	layout: "horizontal",
+}
+".settingsLineRight":{
+	width: "60%",
+}
+
+".settingsFont":{
+	color: "black",
+	top: 8,
+	left: 10,
+	font: {
+		fontSize: 11,
+	},
+}
+
+"#basicSwitch":{
+	top: 5,
+	right: 10,
+}
+
+".settingsExpandArrow":{
+	height: 20,
+	top: 10,
+	right: 10,
 }

@@ -1,4 +1,96 @@
+".hr":{
+	height: 1,
+	backgroundColor: '#59d3ca',
+}
 
-".container" : {
-  
+".taskContainer":{
+	layout:'horizontal',
+	width: "100%",
+    height: 80,
+    top: 0,
+}
+".taskLeft":{
+	layout:'vertical',
+	width: "25%",
+    height: 80,
+}
+".taskMid":{
+	layout:'vertical',
+	width: "45%",
+    height: 80,
+}
+".taskRight":{
+	layout:'vertical',
+	width: "30%",
+    height: 80,
+}
+
+".taskTitle":{
+	font: {
+		fontSize: 18,
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	color: "#59d3ca",
+	top: 12,
+
+}
+
+".taskDesc":{
+	font: {
+		fontSize: 16,
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+	color: "#ffffff",
+}
+
+".taskTitleContainer":{
+	layout: "horizontal",
+	top: 0,
+	height: 40,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+}
+".taskDescContainer":{
+	layout: "horizontal",
+	top: 0,
+	height: 40,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_LEFT,
+}
+
+".taskDate":{
+	font: {
+		fontSize: 14,
+	},
+	textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+	color: "#ffffff",
+	right: 10,
+}
+
+".expandArrow":{
+	height: 20,
+	right: 10,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+}
+
+".taskDateContainer":{
+	right: 0,
+	top: 0,
+	height: 40,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+}
+".expandArrowContainer":{
+	top: 0,
+	right: 0,
+	height: 40,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_RIGHT,
+}
+
+".profileImage":{
+	height: 60,
+	top: 10,
+}
+
+".imageTrash":{
+	height: 15,
+	right: 10,
+	top: 0,
 }

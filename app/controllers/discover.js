@@ -78,16 +78,16 @@ var opera = MapModule.createAnnotation({
     longitude: 10.433579,
     leftView: Ti.UI.createButton({title: 'Læs mere'}),
     image: imageView.toImage(),
-    title: 'Sydney Opera House',
-    subtitle: 'Sydney, New South Wales, Australia'
+    title: 'Event 1',
+    subtitle: 'Funktionen er ikke implementeret'
 });
 
 var bridge = MapModule.createAnnotation({
     latitude: 55.391756,
     longitude: 10.433579,
     image: imageView.toImage(),
-    title: 'Sydney Opera House',
-    subtitle: 'Sydney, New South Wales, Australia'
+    title: 'Event 2',
+    subtitle: 'Funktionen er ikke implementeret'
 });
 
 var mapview = MapModule.createView({
@@ -102,7 +102,7 @@ var mapview = MapModule.createView({
 
 });
 
-// $.mapview.add(mapview);
+$.mapview.add(mapview);
 
 function showAdr(e){
     alert(userAddress);
