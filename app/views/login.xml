@@ -1,12 +1,17 @@
 <Alloy>
     <Window id="login" class="container">
-        <View layout="vertical">
-            <View onClick="myapp.openDiscover">
-                <Label text="Open Discover page" height="100dp"></Label>
+        <View layout="vertical" top="0">
+            <ImageView image="images/logo.png" top="150dp" width="300dp"></ImageView>
+            <View onClick="myapp.openDiscover" layout="vertical">
+                <Label text="This link is for development/prototyping only.\nThe best experience comes from logging in with Facebook." top="20dp" width="80%" textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" color="#fff"></Label>
+                <!-- <Label text="Open Discover page" height="100dp" top="0"></Label> -->
             </View>
-            <View>
+            <View layout="vertical" top="20dp">
                 <LoginButton id="fbLogin" module="facebook" />
                 <!-- <LoginButton id="fbLogin" title="Login" ns="Alloy.Globals.Facebook"/> -->
+            </View>
+            <View layout="vertical" width="80%" top="30dp">
+                <Label textAlign="Ti.UI.TEXT_ALIGNMENT_CENTER" text="Velkommen til Favou.\nVed at logge ind på Facebook, giver du samtidig dit samtykke til at vi kan hente dineprofiloplysninger.\nVi poster aldrig noget på dine vegne." color="#59d3ca"></Label>
             </View>
         </View>
     </Window>
